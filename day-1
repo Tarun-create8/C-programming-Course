@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main(){
+    printf("Helloooooooo Wasssup ");
+    return 0;
+}
+
+// CHALLANGE 1
+#include <stdio.h>
+int main(){
+    printf("First Name: Tarun\n");
+    printf("Last Name: Nandgouli");
+    return 0;
+}
+
+//CHALLENGE 2 with 3 print 
+#include <stdio.h>
+int main(){
+    printf("Full Name: Tarun\n");
+    printf("Age: 21\n");
+    printf("Gender: Male\n");
+    return 0;
+}
+
+//CHALLENGE 2 with 1 print 
+#include <stdio.h>
+int main(){
+    printf("Full Name: Tarun \nAge: 21 \nGender: MALE");
+    return 0;
+}
+
+//Challange 3
+#include <stdio.h>
+int main(){
+    printf("    *   \n");
+    printf("   ***  \n");
+    printf("  *****  \n");
+    return 0;
+}
+
+//challange 4
+#include <stdio.h>
+int main(){
+    printf("   *\n  ***\n *****");
+    return 0;
+}
