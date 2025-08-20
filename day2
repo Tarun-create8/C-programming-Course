@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main(){
+    //using comments in C language 
+    printf("Hello wasssu.....");
+    return 0;
+    /*This is multiline comment that is used to store multi line comment*/
+}
+// Format specifier
+#include <stdio.h>
+int main(){
+    //Integer Format specifiier 
+    printf("We have %d coins in bank\n", 50000000);
+    //Float Format specifiier 
+    printf("We have %f coins in bank\n", 137.5);
+    //Double Format specifiier 
+    printf("We have %lf coins in bank\n", 11137.565);
+    printf("num1=%d, num2=%d, sum=%d\n", 5, 7, 5+7); // In this statement the sum automatically does the arithematic operations 
+    printf("num1=%d, num2=%d, sub=%d\n", 5, 7, 5-7); //For substraction 
+    printf("a=%d, b=%d, sum=%d+%d=%d\n",  1,2,3,4,3+5);//in this the value of a and b value is not required it is just for showing the value is actually calculated using 3+5 
+    printf("a=%d, b=%d, sum=a+b=%d+%d=%d\n",  1,2,3,5,3+5);
+    return 0;
+}
+// Calculator 
+#include<stdio.h>
+
+int main(){
+    printf("a=%d, b=%d, add=%d\n", 5, 3, 5+3);
+    printf("a=%d, b=%d, sub=%d\n", 5, 3, 5-3);
+    printf("a=%d, b=%d, mul=%d\n", 5, 3, 5*3);
+    printf("a=%d, b=%d, div=%d\n", 5, 3, 5/3);
+    printf("a=%d, b=%d, rem=%d\n", 5, 3, 5%3);
+    return 0;
+}
