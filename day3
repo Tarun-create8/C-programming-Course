@@ -1,0 +1,60 @@
+// PRint an rectangle using astriex
+#include <stdio.h>
+
+int main(){
+    printf("**********\n");
+    printf("**********\n");
+    printf("**********\n");
+    printf("**********\n");
+    printf("**********\n");
+    return 0;
+}
+
+// Using 1 printf command 
+#include <stdio.h>
+int main(){
+    printf(
+        "**********\n**********\n**********\n**********\n**********\n"
+    );
+    return 0;
+}
+
+// Task 2 
+#include <stdio.h>
+int main(){
+    printf("1*********\n12********\n123*******\n1234******\n12345*****");
+    return 0;
+}
+
+// 5 print command 
+#include <stdio.h>
+
+int main(){
+    printf("1*********\n");
+    printf("12********\n");
+    printf("123*******\n");
+    printf("1234******\n");
+    printf("12345*****\n");
+    return 0;
+}
+
+//print X 
+#include <stdio.h>
+int main(){
+    printf("   *       *\n");
+    printf("    *     *\n");
+    printf("     *   *\n");
+    printf("       *\n");
+    printf("     *   *\n");
+    printf("    *     *\n");
+    printf("   *       *\n");
+    return 0;
+}
+
+// Another one 
+
+#include <stdio.h>
+int main(){
+    printf("Current year: %d\nAge: %d\nBirth Year: %d", 2025, 21, 2025-21);
+    return 0;
+}
