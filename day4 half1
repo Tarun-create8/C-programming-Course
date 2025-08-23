@@ -1,0 +1,73 @@
+// Using variables and the scanf function 
+#include <stdio.h>
+int main(){
+    int grade1, grade2;
+    scanf("%d %d", &grade1, &grade2);
+    printf("Average: %d\n", (grade1+grade2)/2);
+    return 0;
+}
+// variables 
+#include <stdio.h>
+int main(){
+    int num=10;
+    printf("%d", num);
+    return 0;
+}
+
+// Using scanf 
+#include <stdio.h>
+int main(){
+    int num;
+    printf("Enter number: ");
+    scanf("%d", &num);
+    printf("Number: %d", num);
+    return 0;
+}
+
+//Today's challenge
+#include <stdio.h>
+int main(){
+    //creating two variables 
+    int current_year, age;
+    //Taking two inputs 
+    printf("Enter current year: ");
+    scanf("%d", &current_year);
+    printf("Enter age: ");
+    scanf("%d", &age);
+    //Printing the birth year 
+    printf("Birth Year: %d", current_year-age);
+    return 0;
+}
+//Area of rectangle
+#include <stdio.h>
+
+int main(){
+    //creating two variables
+    double height, width;
+    //Taking two inputs 
+    printf("Enter height: ");
+    scanf("%lf", &height);
+    printf("Enter width: ");
+    scanf("%lf", &width);
+    //Printing the birth year
+    printf("Area of rectangle: %lf\n ", height*width);
+    return 0;
+}
+
+// Perimeter 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    //creating two variables
+    float length, width;
+    //Taking two inputs 
+    printf("Enter length: ");
+    scanf("%f", &length);
+    printf("Enter width: ");
+    scanf("%f", &width);
+    float area;
+    area = 2*(length+width);
+    //Printing the area
+    printf("Perimeter of rectangle: %f", area);
+    return 0;
+}
