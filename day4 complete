@@ -39,9 +39,8 @@ int main(){
     num3=56;
     //formulae
     double result;
-    result=(num1/(double)num2)/(double)num3;
+    result=(num1+(double)num2+(double)num3)/3;
     printf("Average marks: %lf", result);
-
     return 0;
 }
 
@@ -65,7 +64,59 @@ int main(){
     scanf("%d", &num3);
     //formulae
     double result;
-    result=(num1/num2)/num3;
+    result=(num1+num2+num3)/3.0;
     printf("Average marks: %lf", result);
+    return 0;
+}
+
+//Part 1 celcius to faranheit
+#include <stdio.h>
+int main(){
+    double temp;
+    //take input 
+    printf("Enter temperature: ");
+    scanf("%lf", &temp);
+    //Conversion
+    double farenheit;
+    farenheit=(temp*1.8)+32;
+    printf("COnversion: %.2lf farenheit",farenheit);
+    return 0;
+}
+
+//Part 2
+#include <stdio.h>
+int main(){
+    double farenheit;
+    printf("Enter farenheit: ");
+    scanf("%lf", &farenheit);
+    //Conversion
+    double temp;
+    temp=(farenheit-32)/1.8;
+    printf("Temperature in celcius is %lf", temp);
+    return 0;
+}
+
+//Assignment-2
+#include <stdio.h>
+int main(){
+    //create 2 variable with 2 floating point number 
+    double variable1, variable2;
+    //taking input from user 
+    printf("Enter variable1: ");
+    scanf("%lf", &variable1);
+    printf("Enter variable2: ");
+    scanf("%lf", &variable2);
+    printf("Before swap: \n");
+    printf("Var1: %lf\n", variable1);
+    printf("Var2: %lf\n", variable2);
+    //swap
+    double temp;
+    temp=variable1;
+    variable1=variable2;
+    variable2=temp;
+    printf("After Swap: \n");
+    printf("Var1: %lf\n", variable1);
+    printf("Var2: %lf\n", variable2);
+
     return 0;
 }
