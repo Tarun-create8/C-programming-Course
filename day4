@@ -1,0 +1,71 @@
+//No casting 
+#include <stdio.h>
+int main(){
+    int num1=5, num2=2;
+    double result=num1/num2;
+    printf("Result: %lf\n", result);
+    return 0;
+}
+
+// Implicit casting can be done by assigning both ways by using num 1 double by assigning both as double 
+#include <stdio.h>
+int main(){
+    double num1=5;
+    double num2=2;
+    double result=num1/num2;
+    printf("Result: %lf\n", result);
+    return 0;
+}
+
+// Explicit casting can be done by assigning both ways by using num 1 double by assigning both as double
+#include <stdio.h>
+int main(){
+    int num1=5;
+    int num2=2;
+    double result=(double)num1/(double)num2;
+    printf("Result: %lf\n", result);
+    return 0;
+}
+
+// Challange-Exact average grade can be done using 2 ways 
+Explicit Casting
+#include <stdio.h>
+int main(){
+    //create variable 
+    int num1, num2, num3;
+    //Assignm value 
+    num1=25;
+    num2=45;
+    num3=56;
+    //formulae
+    double result;
+    result=(num1/(double)num2)/(double)num3;
+    printf("Average marks: %lf", result);
+
+    return 0;
+}
+
+//Imlicit Casting
+#include <stdio.h>
+int main(){
+    //create variable 
+    int num1;
+    double num2;
+    double num3;
+    //Assignm value 
+    // num1=25;
+    // num2=45;
+    // num3=56;
+    // Taking input from user 
+    printf("Enter num1: ");
+    scanf("%d", &num1);
+    printf("Enter num2: ");
+    scanf("%d", &num2);
+    printf("Enter num3: ");
+    scanf("%d", &num3);
+    //formulae
+    double result;
+    result=(num1/num2)/num3;
+    printf("Average marks: %lf", result);
+    return 0;
+}
