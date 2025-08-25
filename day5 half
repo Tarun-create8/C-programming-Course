@@ -1,0 +1,92 @@
+//nth term calculation
+#include <stdio.h>
+int main(){
+    //create Variable 
+    int nth_term, first_term, number_of_term, common_diffrence;
+    nth_term=0;
+    //Taking input from user 
+    printf("Enter First term: ");
+    scanf("%d", &first_term);
+    printf("Enter number of terms: ");
+    scanf("%d", &number_of_term);
+    printf("Enter common diffrence: ");
+    scanf("%d", &common_diffrence);
+    //create the formula
+    nth_term=first_term+(number_of_term-1)*common_diffrence;
+    printf("An: %d", nth_term);
+    return 0;
+}
+
+// Sum of n terms 
+#include <stdio.h>
+int main(){
+    //create Variable 
+    float a1,an;
+    int n;
+    //Taking input from user 
+    printf("Enter initial term(a1): ");
+    scanf("%f", &a1);
+    printf("Enter last term(an): ");
+    scanf("%f", &an);
+    printf("Enter nth term(n): ");
+    scanf("%d", &n);
+    //create the formula
+    // printf("Sum of n-number is: %lf", (a1+an)*(n/2.0));
+    //or just create another variable 
+    double sum;
+  //Use casting or just set 2 to 2.0
+    sum=(a1+an)*(n/2.0);
+    printf("SUM: %lf", sum);
+    return 0;
+}
+
+//Create Employee slary Calculator
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    //create Variables
+    double salary;
+    int total_hours;
+    //Taking inputs
+    printf("Enter your salary(per hour): ");
+    scanf("%lf", &salary);
+    printf("Number of hours worked in month: ");
+    scanf("%d", &total_hours);
+    //Apply logic 
+    double total_hours_salalry;
+    //NO need for casting 
+    total_hours_salalry=salary*(double)total_hours;
+    printf("Total salary: %lf", total_hours_salalry);
+    return 0;
+}
+
+//Finding diving time
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int distance, speed, hours;
+    
+    //initializing
+    distance=54; 
+    speed=15;
+
+    // //Taking input
+    // printf("Enter distance(KM): ");
+    // scanf("%lf", &distance);
+    // printf("Enter speed(KM/hr): ");
+    // scanf("%lf", &speed);
+    
+    //Formulae
+    hours = (distance/speed);
+    // // for Minutes calculation
+    float speed_in_minutes = speed/60.0;
+    // printf("%f", speed_in_minutes);
+
+
+    float remaining_time_minutes=(distance % speed)/speed_in_minutes;
+    printf("%f", remaining_time_minutes);
+
+    printf("Time required to move from city A to city B is %d hours and %3.f minutes", hours, remaining_time_minutes);
+    return 0;
+}
+
