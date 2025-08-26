@@ -1,0 +1,129 @@
+// Second to hous min and seconds 
+#include <stdio.h>
+int main(){
+    int seconds;
+    printf("Enter number of seconds: ");
+    scanf("%d", &seconds);
+    //first lets initialize
+    int hours;
+    hours=seconds/3600;
+    printf("%d hours", hours);  
+    //Remaining minutes 
+    int minutes;
+    minutes=seconds-3600;
+    int remaining_minutes=(minutes%3600)/60;
+    printf(" %d minutes", remaining_minutes);
+    //for seconds conversion 
+    int remaining_seconds;
+    remaining_seconds=minutes%60;
+    printf(" %d seconds \n", remaining_seconds);
+    return 0;
+}
+
+//2nd Exercise 
+#include <stdio.h>
+int main(){
+    float data;
+    printf("Enter floating type data: ");
+    scanf("%f", &data);
+    float decimal_part;
+    decimal_part=data-(int)data;
+    printf("Result: %.2f", decimal_part);
+    return 0;
+}
+
+//3rd one took additional variable 
+#include <stdio.h>
+int main(){
+    int number, digit1, digit2, digit3;
+    printf("Enter a 3 digit number: ");
+    scanf("%d", &number);
+    //To get 1's value 
+    // printf("%d", number);
+    printf("Enter Digits: ");
+    scanf("%d %d %d", &digit1, &digit2, &digit3);
+    number = digit1*100+digit2*10+digit3*1;
+    int sum_of_digit;
+    sum_of_digit=digit1+digit2+digit3;
+    printf("Sum: %d", sum_of_digit);
+    return 0;
+}
+
+//Without using additional variable
+//3rd one with somne help 
+#include <stdio.h>
+int main(){
+    int number;//take 531
+    printf("Enter 3 digit number: ");
+    scanf("%d", &number);
+
+    int last_digit=number%10;//last number 531%10=1
+    printf("Last: %d\n", last_digit);
+
+    number= number/10.0;//as number is int it will store 53
+    int middle_digit=number%10;//53%10=3
+    printf("Middle: %d\n", middle_digit);
+    number=number/10.0;//53/10=5
+    int first_number=number;
+    printf("First num: %d\n", first_number);
+
+    int sum=first_number+middle_digit+last_digit;
+
+    printf("%d", sum);
+
+    return 0;
+}
+
+//Reversed number my meathod 
+#include <stdio.h>
+int main(){
+    int number;
+    printf("Enter 3 digit number: ");
+    scanf("%d", &number);
+    // asign or get the ones tens and hundred 
+    int units, tens, hundred;
+    units=number%10;
+    tens=(number/10)%10;
+    hundred=(number/10)/10;
+    // printf("%d", units);
+    //Now to reverse the values
+    //crreate new variables 
+    int new_units, new_tens, new_hunderd;
+    new_units=hundred;
+    new_tens=tens;
+    new_hunderd=units;
+    printf("reverse number is %d %d %d", new_hunderd, new_tens, new_units);
+    return 0;
+}
+
+//reverse by another meathod 
+#include <stdio.h>
+int main(){
+    int number; //123
+    printf("Enter 3 digit number: ");
+    scanf("%d", &number);
+    int units, tens, hundred;
+    int reverse_number;
+    units=number%10;//3
+    tens=(number/10)%10;//2
+    hundred=(number/10)/10;//1
+    reverse_number=units;//3
+    reverse_number=reverse_number*10+tens;//3*10+2=32
+    reverse_number=reverse_number*10+hundred;//32*10+1=321
+    printf("Reverse number is %d", reverse_number);
+    return 0;
+}
+
+//Distance between two points 
+#include <stdio.h>
+#include <math.h>
+int main(){
+    int x1, y1, x2, y2;
+    double result;
+    printf("Enter input values: ");
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+    result=(x2-x1)^2+(y2-y1)^2;
+    sqrt(result);
+    printf("Result: %lf", result);
+    return 0;
+}
