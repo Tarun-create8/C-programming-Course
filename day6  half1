@@ -1,0 +1,59 @@
+//1st one 
+#include<stdio.h>
+int main(){
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", marks);
+    if(marks>=60){
+        printf("Congrats u passed");
+    }
+    else{
+        printf("Try better next time");
+    }
+    return 0;
+}
+
+//2nd one
+#include <stdio.h>
+
+int main(){
+    int num1, num2;
+    printf("Enter two number: ");
+    scanf("%d %d", &num1, &num2);
+    if(num1>num2){
+        printf("Num 1 is grater");
+    }
+    else{
+        printf("Num 2 is grater");
+    }
+    return 0;
+}
+
+//challange  
+#include <stdio.h>
+int main(){
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    if(number%2 == 0){
+        printf("The number entered is Even ");
+    }
+    else{
+        printf("Number is odd");
+    }
+    return 0;
+}
+
+//challenge 2
+#include <stdio.h>
+int main(){
+    float number1, number2;
+    printf("Enter two floating point number: ");
+    scanf("%f %f", &number1, &number2);
+    if(number1>number2){
+        printf("Maximum: %f", number1);
+    }else{
+        printf("Maximum: %f", number2);
+    }
+    return 0;
+}
