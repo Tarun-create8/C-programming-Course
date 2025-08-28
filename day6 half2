@@ -1,0 +1,97 @@
+//max of 3 numbers
+#include <stdio.h>
+int main(){
+    //craete variables 
+    int number1, number2, number3;
+    //Taking input from user 
+    printf("Enter number1: ");
+    scanf("%d", &number1);
+    printf("Enter number3: ");
+    scanf("%d", &number2);
+    printf("Enter number3: ");
+    scanf("%d", &number3);
+    //Apply logic 
+    if (number1>number2 && number1>number3){
+        printf("Number 1 is greater");
+    }
+    if(number2>number1 && number2>number3){
+        printf("Number 2  is greater ");
+    }
+    if(number3>number1 && number3>number2){
+        printf("Number 3 is higher");
+    }
+    return 0;
+}
+
+// other efficient ways 
+#include <stdio.h>
+int main(){
+    //craete variables 
+    int number1, number2, number3;
+    //Taking input from user 
+    printf("Enter number1: ");
+    scanf("%d", &number1);
+    printf("Enter number3: ");
+    scanf("%d", &number2);
+    printf("Enter number3: ");
+    scanf("%d", &number3);
+    //Apply logic 
+    if(number1>number2 && number1>number3){
+        printf("Number 1 is higher");
+    }
+    else if(number2>number1 && number2>number3){
+        printf("Number 2 is higher");
+    }
+    else{
+        printf("number 3 is highest");
+    }
+    return 0;
+}
+
+//Optimised way to find mininum and maximum
+#include <stdio.h>
+int main(){
+    int a, b, c;
+    int max, min;
+    printf("Enter a: ");
+    scanf("%d", &a);
+    printf("Enter b: ");
+    scanf("%d", &b);
+    printf("Enter c: ");
+    scanf("%d", &c);
+    max=a;
+    min=b;
+    if(a<b){
+        max=b;
+        min=a;
+    }
+    if(max<c){
+        max=c;
+    }
+    if(c<min){
+        min=c;
+    }
+    printf("Max. number: %d\n", max);
+    printf("Min. number: %d\n", min);
+    return 0;
+}
+
+//Nested if condition 
+#include <stdio.h>
+int main(){
+    int grade;
+    printf("Enter grade: ");
+    scanf("%d", &grade);
+    if(grade>=80){
+        printf("Good job");
+    }
+    // if(80>=grade>=60){
+    //     printf("You passed");
+    // }
+    else if(grade>=60){
+        printf("You did great ");
+    }
+    else{
+        printf("Try better next time");
+    }
+    return 0;
