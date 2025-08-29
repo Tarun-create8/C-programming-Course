@@ -1,0 +1,45 @@
+//Did mot had time to watch lectures will solve some questions 
+//To check if a number is positive negative or 0
+#include <stdio.h>
+int main(){
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    if(number>0){
+        printf("The number is positive\n");
+    }else if(number<0){
+        printf("Number is negative");
+    }else{
+        printf("Number enterd is 0");
+    }
+    return 0;
+}
+
+//Check num is even or odd
+#include <stdio.h>
+int main(){
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    if(number%2 == 0){
+        printf("Number is even ");
+    }
+    else {
+        printf("number is odd ");
+
+    }
+    return 0;
+}
+
+//  TO check if a Alphabet is vovel or consonent
+#include <stdio.h>
+int main(){
+    char variable='a';
+    printf("Enter alphabet: ");
+    scanf("%c", &variable);
+    if(variable == 'a' || variable == 'A'){
+        printf("Its a vowel");
+    }
+
+    return 0;
+}
