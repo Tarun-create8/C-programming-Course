@@ -1,0 +1,151 @@
+//Using logical operators 
+#include <stdio.h>
+int main(){
+    int marks, amount;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+    if(marks>=90 && amount <= 50){
+        printf("I need money as i have earned it ");
+    }else{
+        printf("No money for u");
+    }
+    return 0;
+}
+
+// Using only if condition wont cut it  need to use logical operator 
+#include <stdio.h>
+int main(){
+    int marks, amount;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+    if(marks>=90){
+        printf("I need money as i have earned it ");
+    }
+    else{
+        printf("No money for u");
+    }
+    return 0;
+}
+
+// Using logical OR operator
+#include <stdio.h>
+int main(){
+    int marks, amount;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+    if(marks>=90 || amount <= 50){
+        printf("I need money as i have earned it ");
+    }else{
+        printf("No money for u");
+    }
+    return 0;
+}
+
+//Using NOT operator
+#include <stdio.h>
+int main(){
+    int marks, amount;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+    if(!(marks>80)){ // Only executed when marks <=80
+        printf("I need money as i have earned it ");
+    }else{
+        printf("No money for u");
+    }
+    return 0;
+}
+
+//Grading sysytem 
+#include <stdio.h>
+int main(){
+    char grade;
+    printf("Enter your grade(A-Z): ");
+    scanf("%c", &grade);
+    if(grade == 'A' || 'a'){
+        printf("Marks obtained is 90-100");
+    }
+    else if(grade=='B' || 'b'){
+        printf("Marks obtained 80 - 89");
+    }
+    else if(grade=='C' || 'c'){
+        printf("Marks obtained is 70 -79");
+    }
+    else if(grade=='D' || 'd'){
+        printf("Marks obtained is 70 -79");
+    }
+    else{
+        printf("Error ..... Try again!");
+    }
+    return 0;
+}
+
+//Using Switch statements 
+#include <stdio.h>
+
+int main(){
+    char grade;
+    printf("Enter grade(A-Z): ");
+    scanf("%c", &grade);
+    switch(grade){//Specifying Variable 
+        // Checks if grade == 'A'
+        case 'A': // Here we cant use multiple conditions like OR AND NOT cant include it 
+            printf("Your score is 90-100");
+            break;
+        case 'B':
+            printf("Your score is 80 - 89");
+            break;
+        case 'C':
+            printf("Your score is 70-79");
+            break;
+        default:
+            printf("try again....");
+            break;
+    }
+    return 0;
+}
+
+//Milestone::::::Intermediate Calculator 
+#include <stdio.h>
+int main(){
+    double number1, number2;
+    char operation;
+    printf("Enter number 1: ");
+    scanf("%lf", &number1);
+    printf("Enter number 2: ");
+    scanf("%lf", &number2);
+    printf("Enter operation to perform(+,-,/,*): ");
+    //The space before c is the most important one as it provides room to check if there are other lines that it can execute 
+    scanf(" %c", &operation); // space is importanttttttt<><><><><><><><><<><><><><><><><><<>
+    switch(operation){
+        case '+':
+            printf("Addition: %lf", number1+number2);
+            break;
+        case '-':
+            printf("Subtraction: %lf", number1-number2);
+            break;
+        case '*':
+            printf("Multiplication: %lf", number1*number2);
+            break;
+        case '/':
+            if(number2==0){
+                    printf("Enter number 2 correctly!!!!");
+                }else{
+                    //Here no need to provide Explicit casting as both are double datatype 
+                    printf("Division: %lf", number1/number2);
+                }
+            break;
+        default: 
+            printf("Enter an correct operation....");
+            break;
+    }
+    return 0;
+}
+
