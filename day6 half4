@@ -149,3 +149,28 @@ int main(){
     return 0;
 }
 
+// Trenary Operator 
+#include <stdio.h>
+int main(){
+    int num1, num2;
+    int min;
+    printf("Enter num1 & num2: ");
+    scanf("%d %d", &num1, &num2);
+    //Using simple if statement 
+    // if(num1>num2){
+    //     min = num2;
+    //     printf("Num 2 is minimum %d", min);
+    // }
+    // else{
+    //     min=num1;
+    //     printf("Num 1 is minimum %d", min);
+    // }
+
+    // Instead use Ternery operator simple and easy 
+    min=(num1>num2)?num2:num1;
+    printf("%d", min);
+
+
+    return 0;
+}
+
