@@ -1,0 +1,99 @@
+//Probleam 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    // int ones, tens, hundred;
+    // ones=number%10;
+    // tens=(number/10)%10;
+    // hundred=(number/10)/10;
+    if(number>=10 && number<=99)
+    {
+        printf("Number entered is a 2 digit number");
+    }
+    else if(number>=100 && number<=999){
+        printf("Entered number is a 2 digit number");
+    }
+    else{
+        printf("Enter a valid number.....");
+    }
+    return 0;
+}
+
+//Probleam 2 // to give absolute value of the number 
+#include <stdio.h>
+int main(){
+    int number;
+    printf("ENTER THE NUMBER: ");
+    scanf("%d", &number);
+    if(number>0){
+        printf("%d", number);  
+    }
+    else if(number<0){
+        printf("%d", number*-1);//Yep just multiply it with -1 khallas 
+    }
+    else{
+        printf("Enter a valid number...");
+    }
+    return 0;
+}
+
+//Or 2nd meathod 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number;
+    printf("ENTER THE NUMBER: ");
+    scanf("%d", &number);
+    int result;
+    result=abs(number);
+    printf("%d", result);
+    return 0;
+}
+
+//Probleam 3
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int x, y;
+    printf("Enter the value of X: ");
+    scanf("%d", &x);
+    printf("Enter the value of Y: ");
+    scanf("%d", &y);
+    if(x>0 && y>0){
+        printf("Point lies in the 1st Quadrant");
+    }
+    else if(x<0 && y>0){
+        printf("Number is in 2nd Quadrant");
+    }
+    else if(x<0 && y<0){
+        printf("Number is in 3rd Quadrant");
+    }
+    else if(x==0 && y==0){
+        printf("Point lies in the Origin");
+    }
+    else if(x>0 && y<0){
+        printf("Number is in 4th Quadrant");
+    }
+    else{
+        printf("Number is not valid");
+    }
+    return 0;
+}
+
+//using Ternary
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int x, y;
+    printf("Enter the value of X: ");
+    scanf("%d", &x);
+    printf("Enter the value of Y: ");
+    scanf("%d", &y);
+    int result1;
+    result1=(x>0 && y>0)?"1st quadrant":(x<0 && y>0)?"2nd Quadrant":(x<0 && y<0)?"3rd Quadrant":(x>0 && y<0)?"4th Quadrant":(x==0 && y==0)?"Origin":"Enter Valid number";
+    printf("%s", result1);
+    return 0;
+}
