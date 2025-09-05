@@ -1,0 +1,62 @@
+//3 integers divisible by each other 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num1, num2, num3;
+    printf("Enter number1: ");
+    scanf("%d", &num1);
+    printf("Enter number2: ");
+    scanf("%d", &num2);
+    printf("Enter number3: ");
+    scanf("%d", &num3);
+    // printf("%d\n%d\n%d\n", num1, num2, num3);
+    //Applying the logic total 3 pairs to check 1&2, 2&3, 1&3 any one of then should satisfy
+    if(num1!=0 && num2%num1==0 && num3%num1==0){// code works fine, but when we give zero to it, it crashes 
+        printf("Divisible");
+    }else if(num2!=0 && num1%num2==0 && num3%num2==0){
+        printf("Divisible");
+    }else if(num3!=0 && num1%num3==0 && num2%num3==0){
+        printf("Divisible");
+    }else{
+        printf("Not Divisible");
+    }
+    return 0;
+}
+
+//Check if a year is a leap year
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int year;
+    printf("Enter Year: ");
+    scanf("%d", &year);
+    //Condition year/4%=0 leap and year/100!=0 and year/400 
+    if((year%400 == 0)){
+        printf("Leap Year");
+    }
+    else if(((year%4 == 0) && (year%100!=0))){
+        printf("Leap year");
+    }else{
+        printf("Not a leap year ");
+    }
+    return 0;
+}
+
+//Another approach 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int year;
+    printf("Enter year: ");
+    scanf("%d", &year);
+    if(year%400 == 0){
+        printf("Leap Year..");
+    }
+    else if(year%4==0){
+        printf("Leap year");
+    }
+    else if(year%100 == 0){
+        printf("Not leap year");
+    }
+    return 0;
+}
