@@ -1,0 +1,71 @@
+// // Program to predict the next day
+// /*November, April, June, and September are the months with 30 days ,
+//  February has 28 days (29 days in the leap year) 
+//  and all the remaining months have 31 days*/
+//  //Check if year is leap then according to that print the next date iterate it like datee ++ 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    //User 01 10 2004 --> 02 10 2004
+    int day, month, year;
+    printf("Enter present date: ");
+    scanf("%d %d %d", &day, &month, &year);
+    if(day==0 || month==0 || year==0){
+        printf("ENter proper day or month or year");
+    }
+    //for 31 days 
+    else if((month==1|| month==3 || month==5 || month==7 || month==8 || month==10 || month==12) && day < 31){
+        printf("%d %d %d", day+1, month, year);
+    }
+    else if((month==1|| month==3 || month==5 || month==7 || month==8 || month==10) && day == 31){
+        printf("%d %d %d", (day=0)+1, (month)+1, year);
+    }
+    else if( day == 31 && month == 12){
+        printf("%d %d %d", (day=0)+1, (month=0)+1, year+1);
+    }
+    else if((month==4 || month==6 || month==9 || month==11) && day<30){
+        printf("%d %d %d", day+1, month, year);
+    }
+    else if((month==4 || month==6 || month==9 || month==11) && day == 30){
+        printf("%d %d %d", (day=0)+1, month+1, year);
+    }
+    else if(month == 2){
+            // 1. Check for the exception to the exception (years like 2000)
+            if (year % 400 == 0) {
+                if(day<29){
+                   printf("%d %d %d", day+1, month, year);
+                }
+                else if(day==29){
+                    printf("%d %d %d", (day=0)+1, month+1, year);
+                }
+            }
+            // 2. Check for the exception rule (years like 1900)
+            else if (year % 100 == 0) {
+                if(day<29){
+                   printf("%d %d %d", day+1, month, year);
+                }
+                else if(day==29){
+                    printf("%d %d %d", (day=0)+1, month+1, year);
+                }
+            }
+            // 3. Check for the general rule (years like 2004)
+            else if (year % 4 == 0) {
+                if(day<28){
+                   printf("%d %d %d", day+1, month, year);
+                }
+                else if(day==28){
+                    printf("%d %d %d", (day=0)+1, (month)+1, year);
+                }
+            }
+            // 4. Handle all other normal years (like 2003)
+            else {
+                if(day<28){
+                   printf("%d %d %d", day+1, month, year);
+                }
+                else if(day==28){
+                    printf("%d %d %d", (day=0)+1, (month)+1, year);
+                }
+            }
+    }
+    return 0;
+}
