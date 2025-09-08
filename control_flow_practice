@@ -1,0 +1,101 @@
+1
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    if(number%2==0){
+        printf("Number is even");
+    }
+    else{
+        printf("Number is odd");
+    }
+    return 0;
+}
+
+2
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char variable;
+    printf("Enter variable: ");
+    scanf("%c", &variable);
+    if(variable=='a'||variable=='e'||variable=='i'||variable=='o'||variable=='u'||variable=='A'||variable=='E'||variable=='I'||variable=='O'||variable=='U'){
+        printf("Variable is vowel");
+    }
+    else{
+        printf("Variable is consonant");
+    }
+    return 0;
+}
+
+3 //Having issue in this 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int a, b ,c;
+    printf("Enter a: ");
+    scanf("%d", &a);
+    printf("Enter b: ");
+    scanf("%d", &b);
+    printf("Enter c: ");
+    scanf("%d", &c);
+    int max, min;
+    max=a;
+    min=b;
+    if(max>b){
+        max= a;
+    }else if(min<b){
+        min = b;
+    }
+    if(max < c){
+        max=c;
+    }
+    else if(min>c){
+        min = c;
+    }
+    printf("%d\n", max);
+    printf("%d\n", min);
+    return 0;
+}
+
+//4 // ned to work on this 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    int a, b, c;
+    printf("Enter the value of a: ");
+    scanf("%d", &a);
+    printf("Enter the value of a: ");
+    scanf("%d", &b);
+    printf("Enter the value of a: ");
+    scanf("%d", &c);
+    double discriminant, root1, root2;
+    discriminant=((b*b)-4*a*c);
+    if(discriminant>0){
+        root1=(((-b)+(sqrt(discriminant)/(2.0*a))));
+        root2=(((-b)-(sqrt(discriminant))/(2.0*a)));
+        printf("%.2lf\n", root1);
+        printf("%.2lf\n", root2);
+    }
+    if(discriminant==0){
+        root1=((-b)/(2.0*a));
+        root2=root1;
+        printf("%.2lf\n", root1);
+        printf("%.2lf\n", root2);
+    }
+    if(discriminant<0){
+        double real_part, imaginary_part;
+        real_part=(-b)/(2.0*a);
+        imaginary_part=((sqrt(-discriminant))/(2.0*a));
+
+        root1=(real_part + (imaginary_part));
+        root2=(real_part - (imaginary_part));
+        printf("%.2lf + i%.2lf\n", root1);
+        printf("%.2lf - i%.2lf\n", root2);
+    }
+    return 0;
+}
