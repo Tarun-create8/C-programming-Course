@@ -82,3 +82,26 @@ int main(){
     }
     return 0;
 }
+
+// or can solve this way 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char var;
+    printf("Enter charcater: ");
+    scanf("%c", &var);
+    if(var>='A' && var<='Z'){
+        printf("Upper case");
+    }
+    else if(var>='a' && var<='z'){
+        printf("Lower case");
+    }
+    else if(var>=0 && var<=9){
+        printf("Digit");
+    }
+    else {
+        printf("Other");
+    }
+    return 0;
+}
+
