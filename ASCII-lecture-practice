@@ -56,3 +56,29 @@ int main(){
     return 0;
 }
 
+//5 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char variable;
+    printf("Enter Variable: ");
+    scanf("%c", &variable);
+    // printf("Char is: %c\n", variable);
+    // printf("Decimal is: %d\n", variable);
+    // printf("Hexa decimal is: %X\n", variable);
+    int variable1=variable;
+    printf("%d\n", variable1);
+    if(variable1>=65 && variable1<=90){
+        printf("Upper case letter");
+    }
+    else if(variable1>=97 && variable1){
+        printf("Lower case letter");
+    }
+    else if(variable1>=48 && variable1<=57){
+        printf("Digit");
+    }
+    else{
+        printf("Other character");
+    }
+    return 0;
+}
