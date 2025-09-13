@@ -105,3 +105,80 @@ int main(){
     return 0;
 }
 
+/*Write a program that reads from the user 1 character representing a "1-digit" value in Hexadecimal Format.
+ The program should print the corresponding BINARY representation of the input.
+For example:
+- '4' --> "0100".
+- '7' --> "0111".
+- 'A' --> "1010".
+The input values can be 0,1,2,3,...,A,B,C,D,E,F.*/
+#include <stdio.h>
+#include <stdlib.h>
+int main(){ 
+    char myChar1;
+    int numericValue=0;
+    printf("Enter single Character: ");
+    scanf("%c", &myChar1);
+    printf("%x\n", myChar1);// Actual number in hexa decimal 
+    if(myChar1>='0' && myChar1<='9'){
+        numericValue=myChar1-'0';
+    }
+    else if(myChar1>='A' && myChar1<='F'){
+        numericValue=myChar1-'A'+10;
+    }
+    switch (numericValue)
+    {
+    case 1:
+        printf("0001");
+        break;
+    case 2:
+        printf("0010");
+        break;
+    case 3:
+        printf("0011");
+        break;
+    case 4:
+        printf("0100");
+        break;
+    case 5:
+        printf("0101");
+        break;
+    case 6:
+        printf("0110");
+        break;
+    case 7:
+        printf("0111");
+        break;
+    case 8:
+        printf("1000");
+        break;
+    case 9:
+        printf("1001");
+        break;
+    case 10:
+        printf("1010");
+        break;
+    case 11:
+        printf("1011");
+        break;
+    case 12:
+        printf("1100");
+        break;
+    case 13:
+        printf("1101");
+        break;
+    case 14:
+        printf("1110");
+        break;
+    case 15:
+        printf("1111");
+        break;
+        
+    
+    default:
+        printf("Error...");
+        break;
+    }
+    return 0;
+}
+
