@@ -43,3 +43,22 @@ int main(){
     }
     return 0;
 }
+
+//challenge 2
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number, power, result=1;
+
+    printf("Enter the number: ");
+    scanf("%d", &number);
+    printf("Enter the power: ");
+    scanf("%d", &power);
+    while(power>0){
+        result= result*number ;
+        power--;
+        printf("Inside loop(%d): %d * %d \n", result, result, number);
+    }
+    printf("Final output: %d", result);
+    return 0;
+}
