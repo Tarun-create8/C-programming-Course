@@ -25,3 +25,21 @@ int main(){
     printf("%d", result);
     return 0;
 }
+
+// Challange 
+///challange 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    //to print no of star mentioned by user 
+    int count=1, n;
+    // printf("Enter Count: ");
+    // scanf("%d", &count);
+    printf("Enter n: ");
+    scanf("%d", &n);
+    while(count<=n){
+        printf("*");
+        count = count +1;
+    }
+    return 0;
+}
