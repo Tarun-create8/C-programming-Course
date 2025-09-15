@@ -62,3 +62,24 @@ int main(){
     printf("Final output: %d", result);
     return 0;
 }
+
+//Milestone-->
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int course=1, grade, average=0;
+    printf("Enter the number of Courses: ");
+    scanf("%d", &course);
+    int tempCourse=course;
+    while(course>0){
+        printf("Enter Grade: ");
+        scanf("%d", &grade);
+        average=average+grade;
+        // printf("AVERAGE per loop(%d):%d + %d\n", average, average, grade);
+        course--;
+    }
+    // printf("%d", tempCourse);
+    float updatedAverage=average/(double)tempCourse;
+    printf("Average outside loop: %.2f\n", updatedAverage);
+    return 0;
+}
