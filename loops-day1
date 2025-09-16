@@ -101,6 +101,10 @@ int main()
         scanf("%d", &grade);
     }
     printf("Entered grade count: %d\n", grade_count);
-    printf("Average grade: %f\n", (float)total_sum/grade_count);
+    if(grade_count!=0){
+        printf("Average grade: %f\n", (float)total_sum/grade_count);
+    }else {
+        printf("Error.....");
+    }
     return 0;
 }
