@@ -108,3 +108,31 @@ int main()
     }
     return 0;
 }
+
+//Using while my meathod 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int grade;
+    printf("Enter grade between 0 to 100: ");
+    scanf("%d", &grade);
+    while(grade<0 || grade>100){
+        printf("Enter grade between 0 to 100: ");
+        scanf("%d", &grade);
+    }
+    printf("Yep legit number %d", grade);
+    return 0;
+}
+
+//Another approach
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int grade;
+    do{
+        printf("Enter grade between 0 to 100: ");
+        scanf("%d", &grade);
+    }while(grade<0 || grade>100);
+    printf("Yep legit number %d", grade);
+    return 0;
+}
