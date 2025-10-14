@@ -95,6 +95,22 @@ int main(){
     return 0;
 }
 
+//6th 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number, sum=0;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    for(int i=1; i<=number;i++){
+        if(i%3==0 && i%5==0){
+            sum=sum+i;
+        }
+    }
+    printf("%d ", sum);
+    return 0;
+}
+
 
 
 
