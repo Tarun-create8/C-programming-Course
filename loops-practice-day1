@@ -111,6 +111,39 @@ int main(){
     return 0;
 }
 
+//7th 
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int number, sum_of_3=0, sum_of_5=0, sum_common=0, result=0;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    // //Trival solution 
+    // for(int i=1;i<=number;i++){
+    //     if(i%3==0 || i%5==0){
+    //         sum=sum+i;
+    //     }
+    // }
+
+    
+    //optimal solution(lmao not optimal igss)
+    for(int i=3; i<=number; i=i+3){
+        sum_of_3=sum_of_3+i;
+    }
+    for(int j=5;j<=number;j=j+5){
+        sum_of_5=sum_of_5+j;
+    }
+    for(int i=1;i<=number;i++){
+        if(i%3==0 && i%5==0){
+            sum_common=sum_common+i;
+        }
+    }
+
+    result=sum_of_3+sum_of_5-sum_common;
+    printf("%d", result);
+    return 0;
+}
+
 
 
 
